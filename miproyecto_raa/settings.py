@@ -26,7 +26,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 # dominios permitidos, separados por comas en la variable
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
+#ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
+ALLOWED_HOSTS = ['*']
 
 # direcciones completas (con https://) desde las que se aceptan formularios, como el login de /admin
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', default='', cast=Csv())
